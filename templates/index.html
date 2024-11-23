@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Price Prediction</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Phone Price Prediction</h1>
+      <form action="/predict" method="post">
+        <label for="Ram">RAM (GB):</label>
+        <input type="number" id="Ram" name="Ram" step="1" required />
+
+        <label for="Battery">Battery (mAh):</label>
+        <input type="number" id="Battery" name="Battery" step="1" required />
+
+        <label for="Inbuilt_memory">Inbuilt Memory (GB):</label>
+        <input
+          type="number"
+          id="Inbuilt_memory"
+          name="Inbuilt_memory"
+          step="1"
+          required
+        />
+
+        <label for="No_of_sim">Number of SIMs:</label>
+        <input type="text" id="No_of_sim" name="No_of_sim" required />
+
+        <label for="External_Memory">External Memory:</label>
+        <input
+          type="text"
+          id="External_Memory"
+          name="External_Memory"
+          required
+        />
+
+        <label for="Android_version">Android Version:</label>
+        <input
+          type="text"
+          id="Android_version"
+          name="Android_version"
+          required
+        />
+
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company" required />
+
+        <label for="fast_charging">Fast Charging:</label>
+        <input type="text" id="fast_charging" name="fast_charging" required />
+
+        <label for="Processor_name">Processor Name:</label>
+        <input type="text" id="Processor_name" name="Processor_name" required />
+
+        <button type="submit">Predict Price</button>
+      </form>
+      <h2>{{ prediction }}</h2>
+    </div>
+  </body>
+</html>
